@@ -18,15 +18,26 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	@IBOutlet weak var toolbar: UIToolbar!
 	@IBOutlet weak var saveButton: UIButton!
 	
-	var courseList: [String] = ["course 1", "course 2", "course 3"]
-	var ccList: [String] = ["50", "100", "150", "mirror", "200"]
-	var characterList: [String] = ["mario", "luigi"]
-	var kartList: [String] = ["buggy", "gold kart", "standard", "bike"]
+	var currentlySelectedButtonForPicker: UIButton?
+	
+	var courseList: [String] = ["Select..."]
+	var ccList: [String] = ["Select...", "50", "100", "150", "mirror", "200"]
+	var characterList: [String] = ["Select..."]
+	var kartList: [String] = ["Select..."]
 	
 	var currentPickerSource: [String] = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		for character in BuildManager.shared.characterList {
+			characterList.append(character.name)
+		}
+		
+		courseButton.setTitle(courseList[0], for: UIControl.State.normal)
+		ccButton.setTitle(ccList[0], for: UIControl.State.normal)
+		characterButton.setTitle(characterList[0], for: UIControl.State.normal)
+		kartButton.setTitle(kartList[0], for: UIControl.State.normal)
 		
 		setupTextView(textView: finishPlaceLabel)
 		setupTextView(textView: totalPlayerLabel)
@@ -40,6 +51,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	@IBAction func onCourseButtonTapped(_ sender: Any) {
 		setPickerViewIsHidden(isHidden: false)
 		
+		currentlySelectedButtonForPicker = courseButton
 		currentPickerSource = courseList
 		pickerView.reloadAllComponents()
 	}
@@ -47,6 +59,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	@IBAction func onCCButtonTapped(_ sender: Any) {
 		setPickerViewIsHidden(isHidden: false)
 		
+		currentlySelectedButtonForPicker = ccButton
 		currentPickerSource = ccList
 		pickerView.reloadAllComponents()
 	}
@@ -54,6 +67,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	@IBAction func onCharacterButtonTapped(_ sender: Any) {
 		setPickerViewIsHidden(isHidden: false)
 		
+		currentlySelectedButtonForPicker = characterButton
 		currentPickerSource = characterList
 		pickerView.reloadAllComponents()
 	}
@@ -61,12 +75,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 	@IBAction func onKartButtonTapped(_ sender: Any) {
 		setPickerViewIsHidden(isHidden: false)
 		
+		currentlySelectedButtonForPicker = kartButton
 		currentPickerSource = kartList
 		pickerView.reloadAllComponents()
 	}
 	
 	@IBAction func onPickerDoneButtonTapped(_ sender: Any) {
 		setPickerViewIsHidden(isHidden: true)
+		
+		let selectedName = pickerView.delegate?.pickerView?(pickerView, titleForRow: pickerView.selectedRow(inComponent: 0), forComponent: 0)
+		currentlySelectedButtonForPicker?.setTitle(selectedName, for: UIControl.State.normal)
 	}
 	
 	@IBAction func onSaveButtonTapped(_ sender: Any) {

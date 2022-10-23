@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26A7F83D2904B7EC0085923C /* BuildManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A7F83C2904B7EC0085923C /* BuildManager.swift */; };
+		26CB792A28FE8AAC00A13BF3 /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB792928FE8AAC00A13BF3 /* courses.json */; };
+		26CB792F28FFDF7100A13BF3 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB792E28FFDF7100A13BF3 /* characters.json */; };
+		26CB793128FFDF9500A13BF3 /* karts.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB793028FFDF9500A13BF3 /* karts.json */; };
+		26CB793328FFDFB700A13BF3 /* wheels.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB793228FFDFB700A13BF3 /* wheels.json */; };
+		26CB793528FFDFF600A13BF3 /* gliders.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB793428FFDFF600A13BF3 /* gliders.json */; };
 		26FC8DA428F5031E00121327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FC8DA328F5031E00121327 /* AppDelegate.swift */; };
 		26FC8DA628F5031E00121327 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FC8DA528F5031E00121327 /* SceneDelegate.swift */; };
 		26FC8DA828F5031E00121327 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FC8DA728F5031E00121327 /* ViewController.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26A7F83C2904B7EC0085923C /* BuildManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildManager.swift; sourceTree = "<group>"; };
+		26CB792928FE8AAC00A13BF3 /* courses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
+		26CB792E28FFDF7100A13BF3 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
+		26CB793028FFDF9500A13BF3 /* karts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = karts.json; sourceTree = "<group>"; };
+		26CB793228FFDFB700A13BF3 /* wheels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wheels.json; sourceTree = "<group>"; };
+		26CB793428FFDFF600A13BF3 /* gliders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = gliders.json; sourceTree = "<group>"; };
 		26FC8DA028F5031D00121327 /* MarioKartStatTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarioKartStatTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FC8DA328F5031E00121327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FC8DA528F5031E00121327 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26A7F8392904B7220085923C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				26FC8DA328F5031E00121327 /* AppDelegate.swift */,
+				26FC8DA528F5031E00121327 /* SceneDelegate.swift */,
+				26A7F83B2904B7B20085923C /* Data */,
+				26A7F83A2904B77E0085923C /* View Controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		26A7F83A2904B77E0085923C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				26FC8DA728F5031E00121327 /* ViewController.swift */,
+				26FC8DA928F5031E00121327 /* Main.storyboard */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		26A7F83B2904B7B20085923C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				26A7F83C2904B7EC0085923C /* BuildManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		26CB792828FE8A5E00A13BF3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				26CB792928FE8AAC00A13BF3 /* courses.json */,
+				26CB792E28FFDF7100A13BF3 /* characters.json */,
+				26CB793028FFDF9500A13BF3 /* karts.json */,
+				26CB793228FFDFB700A13BF3 /* wheels.json */,
+				26CB793428FFDFF600A13BF3 /* gliders.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		26FC8D9728F5031D00121327 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +110,8 @@
 		26FC8DA228F5031E00121327 /* MarioKartStatTracker */ = {
 			isa = PBXGroup;
 			children = (
-				26FC8DA328F5031E00121327 /* AppDelegate.swift */,
-				26FC8DA528F5031E00121327 /* SceneDelegate.swift */,
-				26FC8DA728F5031E00121327 /* ViewController.swift */,
-				26FC8DA928F5031E00121327 /* Main.storyboard */,
+				26A7F8392904B7220085923C /* Classes */,
+				26CB792828FE8A5E00A13BF3 /* Data */,
 				26FC8DAF28F5031E00121327 /* Assets.xcassets */,
 				26FC8DB128F5031E00121327 /* LaunchScreen.storyboard */,
 				26FC8DB428F5031E00121327 /* Info.plist */,
@@ -128,8 +178,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CB792A28FE8AAC00A13BF3 /* courses.json in Resources */,
+				26CB793128FFDF9500A13BF3 /* karts.json in Resources */,
 				26FC8DB328F5031E00121327 /* LaunchScreen.storyboard in Resources */,
 				26FC8DB028F5031E00121327 /* Assets.xcassets in Resources */,
+				26CB793328FFDFB700A13BF3 /* wheels.json in Resources */,
+				26CB792F28FFDF7100A13BF3 /* characters.json in Resources */,
+				26CB793528FFDFF600A13BF3 /* gliders.json in Resources */,
 				26FC8DAB28F5031E00121327 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +200,7 @@
 				26FC8DAE28F5031E00121327 /* MarioKartStatTracker.xcdatamodeld in Sources */,
 				26FC8DA428F5031E00121327 /* AppDelegate.swift in Sources */,
 				26FC8DA628F5031E00121327 /* SceneDelegate.swift in Sources */,
+				26A7F83D2904B7EC0085923C /* BuildManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
