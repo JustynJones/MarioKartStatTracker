@@ -218,7 +218,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9V-yC-wMx" userLabel="Name Text Field">
                                 <rect key="frame" x="10.5" y="56" width="393" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-OX-Ro0" userLabel="Kart Part Segmented Control">
                                 <rect key="frame" x="10.5" y="87.5" width="393" height="32"/>
@@ -244,8 +244,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wheels: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fls-6V-oXb" userLabel="Kart Wheels Label">
-                                <rect key="frame" x="10.5" y="370.5" width="65.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tires: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fls-6V-oXb" userLabel="Kart Tires Label">
+                                <rect key="frame" x="10.5" y="370.5" width="46.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -299,7 +299,7 @@
                         <outlet property="saveButton" destination="27r-ak-LhZ" id="58I-d5-ALz"/>
                         <outlet property="selectedGliderLabel" destination="P9e-gF-Q6g" id="TWR-uf-5mN"/>
                         <outlet property="selectedKartBodyLabel" destination="stL-h5-EWt" id="Kbg-c6-uHI"/>
-                        <outlet property="selectedWheelsLabel" destination="fls-6V-oXb" id="JAy-q5-Eqp"/>
+                        <outlet property="selectedTiresLabel" destination="fls-6V-oXb" id="tmr-jN-7WK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FO-7t-I7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

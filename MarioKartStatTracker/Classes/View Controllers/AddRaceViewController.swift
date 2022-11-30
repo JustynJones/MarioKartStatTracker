@@ -8,6 +8,8 @@
 import UIKit
 
 class AddRaceViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+	
 	@IBOutlet var contentView: UIView!
 	@IBOutlet weak var courseButton: UIButton!
 	@IBOutlet weak var ccButton: UIButton!
@@ -47,6 +49,22 @@ class AddRaceViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		ccButton.setTitle(ccList[0], for: UIControl.State.normal)
 		characterButton.setTitle(characterList[0], for: UIControl.State.normal)
 		kartButton.setTitle(kartList[0], for: UIControl.State.normal)
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		self.populateKartsList()
+	}
+	
+	func populateKartsList() {
+		self.kartList = ["Select..."]
+		
+		let savedKarts = try! self.context.fetch(Kart.fetchRequest())
+		
+		for kart in savedKarts {
+			self.kartList.append(kart.name!)
+		}
 	}
 	
 	//Calls this function when the tap is recognized.

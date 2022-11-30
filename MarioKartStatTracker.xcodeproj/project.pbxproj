@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2637436C2936D34E00E6F16C /* Kart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637436A2936D34E00E6F16C /* Kart+CoreDataClass.swift */; };
 		269A5EAB2911EF7A0066BD3D /* AddRaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269A5EAA2911EF7A0066BD3D /* AddRaceViewController.swift */; };
 		269A5EAD2911EF880066BD3D /* CreateKartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269A5EAC2911EF880066BD3D /* CreateKartViewController.swift */; };
 		269A5EAF2911EFA90066BD3D /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269A5EAE2911EFA90066BD3D /* StatsViewController.swift */; };
@@ -14,7 +15,7 @@
 		26CB792A28FE8AAC00A13BF3 /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB792928FE8AAC00A13BF3 /* courses.json */; };
 		26CB792F28FFDF7100A13BF3 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB792E28FFDF7100A13BF3 /* characters.json */; };
 		26CB793128FFDF9500A13BF3 /* karts.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB793028FFDF9500A13BF3 /* karts.json */; };
-		26CB793328FFDFB700A13BF3 /* wheels.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB793228FFDFB700A13BF3 /* wheels.json */; };
+		26CB793328FFDFB700A13BF3 /* tires.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB793228FFDFB700A13BF3 /* tires.json */; };
 		26CB793528FFDFF600A13BF3 /* gliders.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CB793428FFDFF600A13BF3 /* gliders.json */; };
 		26FC8DA428F5031E00121327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FC8DA328F5031E00121327 /* AppDelegate.swift */; };
 		26FC8DA628F5031E00121327 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FC8DA528F5031E00121327 /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2637436A2936D34E00E6F16C /* Kart+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kart+CoreDataClass.swift"; sourceTree = "<group>"; };
 		269A5EAA2911EF7A0066BD3D /* AddRaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRaceViewController.swift; sourceTree = "<group>"; };
 		269A5EAC2911EF880066BD3D /* CreateKartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKartViewController.swift; sourceTree = "<group>"; };
 		269A5EAE2911EFA90066BD3D /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +35,7 @@
 		26CB792928FE8AAC00A13BF3 /* courses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
 		26CB792E28FFDF7100A13BF3 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
 		26CB793028FFDF9500A13BF3 /* karts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = karts.json; sourceTree = "<group>"; };
-		26CB793228FFDFB700A13BF3 /* wheels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wheels.json; sourceTree = "<group>"; };
+		26CB793228FFDFB700A13BF3 /* tires.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tires.json; sourceTree = "<group>"; };
 		26CB793428FFDFF600A13BF3 /* gliders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = gliders.json; sourceTree = "<group>"; };
 		26FC8DA028F5031D00121327 /* MarioKartStatTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarioKartStatTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FC8DA328F5031E00121327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,12 +59,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		263743692936D34E00E6F16C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2637436A2936D34E00E6F16C /* Kart+CoreDataClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		26A7F8392904B7220085923C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				26FC8DA328F5031E00121327 /* AppDelegate.swift */,
 				26FC8DA528F5031E00121327 /* SceneDelegate.swift */,
 				26A7F83B2904B7B20085923C /* Data */,
+				263743692936D34E00E6F16C /* Model */,
 				26A7F83A2904B77E0085923C /* View Controllers */,
 			);
 			path = Classes;
@@ -71,11 +82,11 @@
 		26A7F83A2904B77E0085923C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				26FC8DA728F5031E00121327 /* ViewController.swift */,
-				26FC8DA928F5031E00121327 /* Main.storyboard */,
 				269A5EAA2911EF7A0066BD3D /* AddRaceViewController.swift */,
 				269A5EAC2911EF880066BD3D /* CreateKartViewController.swift */,
 				269A5EAE2911EFA90066BD3D /* StatsViewController.swift */,
+				26FC8DA728F5031E00121327 /* ViewController.swift */,
+				26FC8DA928F5031E00121327 /* Main.storyboard */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -94,7 +105,7 @@
 				26CB792928FE8AAC00A13BF3 /* courses.json */,
 				26CB792E28FFDF7100A13BF3 /* characters.json */,
 				26CB793028FFDF9500A13BF3 /* karts.json */,
-				26CB793228FFDFB700A13BF3 /* wheels.json */,
+				26CB793228FFDFB700A13BF3 /* tires.json */,
 				26CB793428FFDFF600A13BF3 /* gliders.json */,
 			);
 			path = Data;
@@ -191,7 +202,7 @@
 				26CB793128FFDF9500A13BF3 /* karts.json in Resources */,
 				26FC8DB328F5031E00121327 /* LaunchScreen.storyboard in Resources */,
 				26FC8DB028F5031E00121327 /* Assets.xcassets in Resources */,
-				26CB793328FFDFB700A13BF3 /* wheels.json in Resources */,
+				26CB793328FFDFB700A13BF3 /* tires.json in Resources */,
 				26CB792F28FFDF7100A13BF3 /* characters.json in Resources */,
 				26CB793528FFDFF600A13BF3 /* gliders.json in Resources */,
 				26FC8DAB28F5031E00121327 /* Main.storyboard in Resources */,
@@ -211,6 +222,7 @@
 				26FC8DA428F5031E00121327 /* AppDelegate.swift in Sources */,
 				26FC8DA628F5031E00121327 /* SceneDelegate.swift in Sources */,
 				269A5EAD2911EF880066BD3D /* CreateKartViewController.swift in Sources */,
+				2637436C2936D34E00E6F16C /* Kart+CoreDataClass.swift in Sources */,
 				269A5EAF2911EFA90066BD3D /* StatsViewController.swift in Sources */,
 				26A7F83D2904B7EC0085923C /* BuildManager.swift in Sources */,
 			);

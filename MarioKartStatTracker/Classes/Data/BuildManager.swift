@@ -29,14 +29,14 @@ class BuildManager {
 	
 	var characterList: [BuildPart] = []
 	var kartsList: [BuildPart] = []
-	var wheelsList: [BuildPart] = []
+	var tiresList: [BuildPart] = []
 	var glidersList: [BuildPart] = []
 	
 	private init() {
 		DispatchQueue.global().async {
 			self.characterList = self.loadFile(fileName: "characters")
 			self.kartsList = self.loadFile(fileName: "karts")
-			self.wheelsList = self.loadFile(fileName: "wheels")
+			self.tiresList = self.loadFile(fileName: "tires")
 			self.glidersList = self.loadFile(fileName: "gliders")
 		}
 	}

@@ -9,60 +9,69 @@ import UIKit
 
 enum KartPiece {
 	case body
-	case wheels
+	case tires
 	case glider
 }
 
-class CreateKartViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class CreateKartViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+	let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+	
 	@IBOutlet weak var nameTextField: UITextField!
 	@IBOutlet weak var kartPieceSegmentedControl: UISegmentedControl!
 	@IBOutlet weak var pickerView: UIPickerView!
 	@IBOutlet weak var selectedKartBodyLabel: UILabel!
-	@IBOutlet weak var selectedWheelsLabel: UILabel!
+	@IBOutlet weak var selectedTiresLabel: UILabel!
 	@IBOutlet weak var selectedGliderLabel: UILabel!
 	@IBOutlet weak var saveButton: UIButton!
 	
-	var kartList: [String] = ["Select..."]
-	var wheelsList: [String] = ["Select..."]
+	var bodyList: [String] = ["Select..."]
+	var tiresList: [String] = ["Select..."]
 	var gliderList: [String] = ["Select..."]
 	
 	var currentlySelectedPiece: KartPiece = .body
 	var currentPickerSource: [String] = []
 	
 	var currentlySelectedBodyIndex: Int = 0
-	var currentlySelectedWheelsIndex: Int = 0
+	var currentlySelectedTiresIndex: Int = 0
 	var currentlySelectedGliderIndex: Int = 0
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.nameTextField.delegate = self
+		
 		for kart in BuildManager.shared.kartsList {
-			kartList.append(kart.name)
+			bodyList.append(kart.name)
 		}
 		
-		for wheels in BuildManager.shared.wheelsList {
-			wheelsList.append(wheels.name)
+		for tires in BuildManager.shared.tiresList {
+			tiresList.append(tires.name)
 		}
 		
 		for glider in BuildManager.shared.glidersList {
 			gliderList.append(glider.name)
 		}
 		
-		currentPickerSource = kartList
+		currentPickerSource = bodyList
 		pickerView.reloadAllComponents()
+	}
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		self.view.endEditing(true)
+		return false
 	}
 	
 	@IBAction func onPartChanged(_ sender: Any) {
 		switch kartPieceSegmentedControl.selectedSegmentIndex {
 		case 0:
 			currentlySelectedPiece = .body
-			currentPickerSource = kartList
+			currentPickerSource = bodyList
 			pickerView.selectRow(currentlySelectedBodyIndex, inComponent: 0, animated: false)
 			break
 		case 1:
-			currentlySelectedPiece = .wheels
-			currentPickerSource = wheelsList
-			pickerView.selectRow(currentlySelectedWheelsIndex, inComponent: 0, animated: false)
+			currentlySelectedPiece = .tires
+			currentPickerSource = tiresList
+			pickerView.selectRow(currentlySelectedTiresIndex, inComponent: 0, animated: false)
 			break
 		case 2:
 			currentlySelectedPiece = .glider
@@ -99,9 +108,9 @@ class CreateKartViewController: UIViewController, UIPickerViewDelegate, UIPicker
 			selectedKartBodyLabel.text = "Body: " + partName
 			currentlySelectedBodyIndex = row
 			break
-		case .wheels:
-			selectedWheelsLabel.text = "Wheels: " + partName
-			currentlySelectedWheelsIndex = row
+		case .tires:
+			selectedTiresLabel.text = "Tires: " + partName
+			currentlySelectedTiresIndex = row
 			break
 		case .glider:
 			selectedGliderLabel.text = "Glider: " + partName
@@ -111,6 +120,49 @@ class CreateKartViewController: UIViewController, UIPickerViewDelegate, UIPicker
 	}
 
 	@IBAction func saveButtonTapped(_ sender: Any) {
+		var alertTitle = ""
+		var alertMessage = ""
+		var shouldShowFailureAlert = false
+		
+		let name = self.nameTextField.text
+		if(name == nil || name!.isEmpty) {
+			alertTitle = "No Name"
+			alertMessage = "The name field is empty. Please give this build a name."
+			shouldShowFailureAlert = true
+		} else if(self.currentlySelectedBodyIndex == 0) {
+			alertTitle = "No Body Selected"
+			alertMessage = "The body field has not been selected. Please select a body."
+			shouldShowFailureAlert = true
+		} else if(self.currentlySelectedTiresIndex == 0) {
+			alertTitle = "No Tires Selected"
+			alertMessage = "The tires field has not been selected. Please select some tires."
+			shouldShowFailureAlert = true
+		} else if(self.currentlySelectedGliderIndex == 0) {
+			alertTitle = "No Glider Selected"
+			alertMessage = "The glider field has not been selected. Please select a glider."
+			shouldShowFailureAlert = true
+		}
+		
+		if(!shouldShowFailureAlert) {
+			let kart = Kart(context: self.context)
+			kart.name = name
+			kart.body = self.bodyList[self.currentlySelectedBodyIndex]
+			kart.tires = self.tiresList[self.currentlySelectedTiresIndex]
+			kart.glider = self.gliderList[self.currentlySelectedGliderIndex]
+			
+			do {
+				try self.context.save()
+				alertTitle = "Save Success"
+				alertMessage = "Your build has successfully been saved."
+			} catch {
+				alertTitle = "Save Failed"
+				alertMessage = "Your build has failed to save. Please try again."
+			}
+		}
+		
+		let alert = UIAlertController(title:alertTitle, message:alertMessage, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title:"OK", style:.default, handler:nil))
+		self.present(alert, animated: true, completion: nil)
 	}
 }
 
