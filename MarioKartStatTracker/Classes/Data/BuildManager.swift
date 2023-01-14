@@ -8,20 +8,20 @@
 import Foundation
 
 struct BuildPart: Codable {
-	var name = ""
-	var weight = 0
-	var acceleration = 0
-	var on_road_traction = 0
-	var off_road_traction = 0
-	var mini_turbo = 0
-	var ground_speed = 0
-	var water_speed = 0
-	var anti_gravity_speed = 0
-	var air_speed = 0
-	var ground_handling = 0
-	var water_handling = 0
-	var anti_gravity_handling = 0
-	var air_handling = 0
+	var name: String = ""
+	var weight: Int = 0
+	var acceleration: Int = 0
+	var on_road_traction: Int = 0
+	var off_road_traction: Int = 0
+	var mini_turbo: Int = 0
+	var ground_speed: Int = 0
+	var water_speed: Int = 0
+	var anti_gravity_speed: Int = 0
+	var air_speed: Int = 0
+	var ground_handling: Int = 0
+	var water_handling: Int = 0
+	var anti_gravity_handling: Int = 0
+	var air_handling: Int = 0
 }
 
 class BuildManager {

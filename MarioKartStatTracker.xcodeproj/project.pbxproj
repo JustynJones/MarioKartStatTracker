@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2637436C2936D34E00E6F16C /* Kart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637436A2936D34E00E6F16C /* Kart+CoreDataClass.swift */; };
+		264960B5295A71AA00A8044B /* CourseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264960B4295A71AA00A8044B /* CourseManager.swift */; };
+		264960BB295CE86600A8044B /* Race+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264960BA295CE86600A8044B /* Race+CoreDataClass.swift */; };
 		269A5EAB2911EF7A0066BD3D /* AddRaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269A5EAA2911EF7A0066BD3D /* AddRaceViewController.swift */; };
 		269A5EAD2911EF880066BD3D /* CreateKartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269A5EAC2911EF880066BD3D /* CreateKartViewController.swift */; };
 		269A5EAF2911EFA90066BD3D /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269A5EAE2911EFA90066BD3D /* StatsViewController.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		2637436A2936D34E00E6F16C /* Kart+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kart+CoreDataClass.swift"; sourceTree = "<group>"; };
+		264960B4295A71AA00A8044B /* CourseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseManager.swift; sourceTree = "<group>"; };
+		264960BA295CE86600A8044B /* Race+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Race+CoreDataClass.swift"; sourceTree = "<group>"; };
 		269A5EAA2911EF7A0066BD3D /* AddRaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRaceViewController.swift; sourceTree = "<group>"; };
 		269A5EAC2911EF880066BD3D /* CreateKartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKartViewController.swift; sourceTree = "<group>"; };
 		269A5EAE2911EFA90066BD3D /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				2637436A2936D34E00E6F16C /* Kart+CoreDataClass.swift */,
+				264960BA295CE86600A8044B /* Race+CoreDataClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				26A7F83C2904B7EC0085923C /* BuildManager.swift */,
+				264960B4295A71AA00A8044B /* CourseManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -216,8 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264960BB295CE86600A8044B /* Race+CoreDataClass.swift in Sources */,
 				26FC8DA828F5031E00121327 /* ViewController.swift in Sources */,
 				269A5EAB2911EF7A0066BD3D /* AddRaceViewController.swift in Sources */,
+				264960B5295A71AA00A8044B /* CourseManager.swift in Sources */,
 				26FC8DAE28F5031E00121327 /* MarioKartStatTracker.xcdatamodeld in Sources */,
 				26FC8DA428F5031E00121327 /* AppDelegate.swift in Sources */,
 				26FC8DA628F5031E00121327 /* SceneDelegate.swift in Sources */,

@@ -1,146 +1,258 @@
 [
 	{
-		"cup": "Mushroom Cup",
-		"courses": [
-			"Mario Kart Stadium",
-			"Water Park",
-			"Sweet Sweet Canyon",
-			"Thwomp Ruins"
-		]
+		"cup" : "Mushroom Cup",
+		"name" : "Mario Kart Stadium"
 	},
 	{
-		"cup": "Flower Cup",
-		"courses": [
-			"Mario Circuit",
-			"Toad Harbor",
-			"Twisted Mansion",
-			"Shy Guy Falls"
-		]
+		"cup" : "Mushroom Cup",
+		"name" : "Water Park"
 	},
 	{
-		"cup": "Star Cup",
-		"courses": [
-			"Sunshine Airport",
-			"Dolphin Shoals",
-			"Electrodome",
-			"Mount Wario"
-		]
+		"cup" : "Mushroom Cup",
+		"name" : "Sweet Sweet Canyon"
 	},
 	{
-		"cup": "Special Cup",
-		"courses": [
-			"Cloudtop Cruise",
-			"Bone Dry Ruins",
-			"Bowser's Castle",
-			"Rainbow Road"
-		]
+		"cup" : "Mushroom Cup",
+		"name" : "Thwomp Ruins"
 	},
 	{
-		"cup": "Shell Cup",
-		"courses": [
-			"Wii Moo Moo Meadows",
-			"GBA Mario Circuit",
-			"DS Cheep Cheep Beach",
-			"N64 Toad's Turnpike"
-		]
+		"cup" : "Flower Cup",
+		"name" : "Mario Circuit"
 	},
 	{
-		"cup": "Banana Cup",
-		"courses": [
-			"GCN Dry Dry Desert",
-			"SNES Donut Plains 3",
-			"N64 Royal Raceway",
-			"3ds DK Jungle"
-		]
+		"cup" : "Flower Cup",
+		"name" : "Toad Harbor"
 	},
 	{
-		"cup": "Leaf Cup",
-		"courses": [
-			"DS Wario Stadium",
-			"GCN Sherbet Land",
-			"3DS Music Park",
-			"N64 Yoshi Valley"
-		]
+		"cup" : "Flower Cup",
+		"name" : "Twisted Mansion"
 	},
 	{
-		"cup": "Lightning Cup",
-		"courses": [
-			"DS Tick Tock Clock",
-			"3DS Piranha Plant Slide",
-			"Wii Grumble Volcano",
-			"N64 Rainbow Road"
-		]
+		"cup" : "Flower Cup",
+		"name" : "Shy Guy Falls"
 	},
 	{
-		"cup": "Egg Cup",
-		"courses": [
-			"GCN Yoshi's Circuit",
-			"Excitebike Arena",
-			"Dragon Driftway",
-			"Mute City"
-		]
+		"cup" : "Star Cup",
+		"name" : "Sunshine Airport"
 	},
 	{
-		"cup": "Triforce Cup",
-		"courses": [
-			"Wii Wario's Gold Mine",
-			"SNES Rainbow Road",
-			"Ice Ice Outpost",
-			"Hyrule Circuit"
-		]
+		"cup" : "Star Cup",
+		"name" : "Dolphin Shoals"
 	},
 	{
-		"cup": "Bell Cup",
-		"courses": [
-			"3DS Neo Bowser City",
-			"GBA Ribbon Road",
-			"Super Bell Subway",
-			"Big Blue"
-		]
+		"cup" : "Star Cup",
+		"name" : "Electrodome"
 	},
 	{
-		"cup": "Crossing Cup",
-		"courses": [
-			"GCN Baby Park",
-			"GBA Cheese Land",
-			"Wild Woods",
-			"Animal Crossing Circuit"
-		]
+		"cup" : "Star Cup",
+		"name" : "Mount Wario"
 	},
 	{
-		"cup": "Golden Dash Cup",
-		"courses": [
-			"Tour Paris Promenade",
-			"3DS Toad Circuit",
-			"N64 Choco Mountain",
-			"Wii Coconut Mall"
-		]
+		"cup" : "Special Cup",
+		"name" : "Cloudtop Cruise"
 	},
 	{
-		"cup": "Lucky Cat Cup",
-		"courses": [
-			"Tour Tokyo Blur",
-			"DS Shroom Ridge",
-			"GBA Sky Garden",
-			"Ninja Hideaway"
-		]
+		"cup" : "Special Cup",
+		"name" : "Bone Dry Ruins"
 	},
 	{
-		"cup": "Turnip Cup",
-		"courses": [
-			"Tour New York Minute",
-			"SNES Mario Circuit 3",
-			"N64 Kalimari Desert",
-			"DS Waluigi Pinball"
-		]
+		"cup" : "Special Cup",
+		"name" : "Bowser's Castle"
 	},
 	{
-		"cup": "Propeller Cup",
-		"courses": [
-			"Tour Sydney Sprint",
-			"GBA Snow Land",
-			"Wii Mushroom Gorge",
-			"Sky-High Sundae"
-		]
+		"cup" : "Special Cup",
+		"name" : "Rainbow Road"
+	},
+	{
+		"cup" : "Shell Cup",
+		"name" : "Wii Moo Moo Meadows"
+	},
+	{
+		"cup" : "Shell Cup",
+		"name" : "GBA Mario Circuit"
+	},
+	{
+		"cup" : "Shell Cup",
+		"name" : "DS Cheep Cheep Beach"
+	},
+	{
+		"cup" : "Shell Cup",
+		"name" : "N64 Toad's Turnpike"
+	},
+	{
+		"cup" : "Banana Cup",
+		"name" : "GCN Dry Dry Desert"
+	},
+	{
+		"cup" : "Banana Cup",
+		"name" : "SNES Donut Plains 3"
+	},
+	{
+		"cup" : "Banana Cup",
+		"name" : "N64 Royal Raceway"
+	},
+	{
+		"cup" : "Banana Cup",
+		"name" : "3DS DK Jungle"
+	},
+	{
+		"cup" : "Leaf Cup",
+		"name" : "DS Wario Stadium"
+	},
+	{
+		"cup" : "Leaf Cup",
+		"name" : "GCN Sherbet Land"
+	},
+	{
+		"cup" : "Leaf Cup",
+		"name" : "3DS Music Park"
+	},
+	{
+		"cup" : "Leaf Cup",
+		"name" : "N64 Yoshi Valley"
+	},
+	{
+		"cup" : "Lightning Cup",
+		"name" : "DS Tick Tock Clock"
+	},
+	{
+		"cup" : "Lightning Cup",
+		"name" : "3DS Piranha Plant Slide"
+	},
+	{
+		"cup" : "Lightning Cup",
+		"name" : "Wii Grumble Volcano"
+	},
+	{
+		"cup" : "Lightning Cup",
+		"name" : "N64 Rainbow Road"
+	},
+	{
+		"cup" : "Egg Cup",
+		"name" : "GCN Yoshi's Circuit"
+	},
+	{
+		"cup" : "Egg Cup",
+		"name" : "Excitebike Arena"
+	},
+	{
+		"cup" : "Egg Cup",
+		"name" : "Dragon Driftway"
+	},
+	{
+		"cup" : "Egg Cup",
+		"name" : "Mute City"
+	},
+	{
+		"cup" : "Triforce Cup",
+		"name" : "Wii Wario's Gold Mine"
+	},
+	{
+		"cup" : "Triforce Cup",
+		"name" : "SNES Rainbow Road"
+	},
+	{
+		"cup" : "Triforce Cup",
+		"name" : "Ice Ice Outpost"
+	},
+	{
+		"cup" : "Triforce Cup",
+		"name" : "Hyrule Circuit"
+	},
+	{
+		"cup" : "Bell Cup",
+		"name" : "3DS Neo Bowser City"
+	},
+	{
+		"cup" : "Bell Cup",
+		"name" : "GBA Ribbon Road"
+	},
+	{
+		"cup" : "Bell Cup",
+		"name" : "Super Bell Subway"
+	},
+	{
+		"cup" : "Bell Cup",
+		"name" : "Big Blue"
+	},
+	{
+		"cup" : "Crossing Cup",
+		"name" : "GCN Baby Park"
+	},
+	{
+		"cup" : "Crossing Cup",
+		"name" : "GBA Cheese Land"
+	},
+	{
+		"cup" : "Crossing Cup",
+		"name" : "Wild Woods"
+	},
+	{
+		"cup" : "Crossing Cup",
+		"name" : "Animal Crossing Circuit"
+	},
+	{
+		"cup" : "Golden Dash Cup",
+		"name" : "Tour Paris Promenade"
+	},
+	{
+		"cup" : "Golden Dash Cup",
+		"name" : "3DS Toad Circuit"
+	},
+	{
+		"cup" : "Golden Dash Cup",
+		"name" : "N64 Choco Mountain"
+	},
+	{
+		"cup" : "Golden Dash Cup",
+		"name" : "Wii Coconut Mall"
+	},
+	{
+		"cup" : "Lucky Cat Cup",
+		"name" : "Tour Tokyo Blur"
+	},
+	{
+		"cup" : "Lucky Cat Cup",
+		"name" : "DS Shroom Ridge"
+	},
+	{
+		"cup" : "Lucky Cat Cup",
+		"name" : "GBA Sky Garden"
+	},
+	{
+		"cup" : "Lucky Cat Cup",
+		"name" : "Ninja Hideaway"
+	},
+	{
+		"cup" : "Turnip Cup",
+		"name" : "Tour New York Minute"
+	},
+	{
+		"cup" : "Turnip Cup",
+		"name" : "SNES Mario Circuit 3"
+	},
+	{
+		"cup" : "Turnip Cup",
+		"name" : "N64 Kalimari Desert"
+	},
+	{
+		"cup" : "Turnip Cup",
+		"name" : "DS Waluigi Pinball"
+	},
+	{
+		"cup" : "Propeller Cup",
+		"name" : "Tour Sydney Sprint"
+	},
+	{
+		"cup" : "Propeller Cup",
+		"name" : "GBA Snow Land"
+	},
+	{
+		"cup" : "Propeller Cup",
+		"name" : "Wii Mushroom Gorge"
+	},
+	{
+		"cup" : "Propeller Cup",
+		"name" : "Sky-High Sundae"
 	}
 ]

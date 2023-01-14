@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		//Load up build manager
 		_ = BuildManager.shared
+		_ = CourseManager.shared
 		
 		return true
 	}

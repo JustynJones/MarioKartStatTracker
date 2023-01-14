@@ -8,6 +8,7 @@
 import UIKit
 
 enum KartPiece {
+	case character
 	case body
 	case tires
 	case glider
@@ -19,18 +20,21 @@ class CreateKartViewController: UIViewController, UITextFieldDelegate, UIPickerV
 	@IBOutlet weak var nameTextField: UITextField!
 	@IBOutlet weak var kartPieceSegmentedControl: UISegmentedControl!
 	@IBOutlet weak var pickerView: UIPickerView!
+	@IBOutlet weak var selectedCharacterLabel: UILabel!
 	@IBOutlet weak var selectedKartBodyLabel: UILabel!
 	@IBOutlet weak var selectedTiresLabel: UILabel!
 	@IBOutlet weak var selectedGliderLabel: UILabel!
 	@IBOutlet weak var saveButton: UIButton!
 	
+	var characterList: [String] = ["Select..."]
 	var bodyList: [String] = ["Select..."]
 	var tiresList: [String] = ["Select..."]
 	var gliderList: [String] = ["Select..."]
 	
-	var currentlySelectedPiece: KartPiece = .body
+	var currentlySelectedPiece: KartPiece = .character
 	var currentPickerSource: [String] = []
 	
+	var currentlySelectedCharacterIndex: Int = 0
 	var currentlySelectedBodyIndex: Int = 0
 	var currentlySelectedTiresIndex: Int = 0
 	var currentlySelectedGliderIndex: Int = 0
@@ -39,6 +43,10 @@ class CreateKartViewController: UIViewController, UITextFieldDelegate, UIPickerV
 		super.viewDidLoad()
 		
 		self.nameTextField.delegate = self
+		
+		for character in BuildManager.shared.characterList {
+			characterList.append(character.name)
+		}
 		
 		for kart in BuildManager.shared.kartsList {
 			bodyList.append(kart.name)
@@ -52,7 +60,7 @@ class CreateKartViewController: UIViewController, UITextFieldDelegate, UIPickerV
 			gliderList.append(glider.name)
 		}
 		
-		currentPickerSource = bodyList
+		currentPickerSource = characterList
 		pickerView.reloadAllComponents()
 	}
 	
@@ -64,16 +72,21 @@ class CreateKartViewController: UIViewController, UITextFieldDelegate, UIPickerV
 	@IBAction func onPartChanged(_ sender: Any) {
 		switch kartPieceSegmentedControl.selectedSegmentIndex {
 		case 0:
+			currentlySelectedPiece = .character
+			currentPickerSource = characterList
+			pickerView.selectRow(currentlySelectedCharacterIndex, inComponent: 0, animated: false)
+			break
+		case 1:
 			currentlySelectedPiece = .body
 			currentPickerSource = bodyList
 			pickerView.selectRow(currentlySelectedBodyIndex, inComponent: 0, animated: false)
 			break
-		case 1:
+		case 2:
 			currentlySelectedPiece = .tires
 			currentPickerSource = tiresList
 			pickerView.selectRow(currentlySelectedTiresIndex, inComponent: 0, animated: false)
 			break
-		case 2:
+		case 3:
 			currentlySelectedPiece = .glider
 			currentPickerSource = gliderList
 			pickerView.selectRow(currentlySelectedGliderIndex, inComponent: 0, animated: false)
@@ -104,6 +117,9 @@ class CreateKartViewController: UIViewController, UITextFieldDelegate, UIPickerV
 		}
 		
 		switch currentlySelectedPiece {
+		case .character:
+			selectedCharacterLabel.text = "Character: " + partName
+			currentlySelectedCharacterIndex = row
 		case .body:
 			selectedKartBodyLabel.text = "Body: " + partName
 			currentlySelectedBodyIndex = row
@@ -129,6 +145,10 @@ class CreateKartViewController: UIViewController, UITextFieldDelegate, UIPickerV
 			alertTitle = "No Name"
 			alertMessage = "The name field is empty. Please give this build a name."
 			shouldShowFailureAlert = true
+		} else if(self.currentlySelectedCharacterIndex == 0) {
+			alertTitle = "No Character Selected"
+			alertMessage = "The character field has not been selected. Please select a character."
+			shouldShowFailureAlert = true
 		} else if(self.currentlySelectedBodyIndex == 0) {
 			alertTitle = "No Body Selected"
 			alertMessage = "The body field has not been selected. Please select a body."
@@ -146,6 +166,7 @@ class CreateKartViewController: UIViewController, UITextFieldDelegate, UIPickerV
 		if(!shouldShowFailureAlert) {
 			let kart = Kart(context: self.context)
 			kart.name = name
+			kart.character = self.characterList[self.currentlySelectedCharacterIndex]
 			kart.body = self.bodyList[self.currentlySelectedBodyIndex]
 			kart.tires = self.tiresList[self.currentlySelectedTiresIndex]
 			kart.glider = self.gliderList[self.currentlySelectedGliderIndex]
